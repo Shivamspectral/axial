@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Siddhant College of Engineering — Feedback Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="assets/jszip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
+</head>
+<body>
+<div class="bg-grid"></div><div class="glow glow-a"></div><div class="glow glow-b"></div>
+<section id="loginScreen" class="login-screen">
+  <div class="login-card">
+    <div class="login-logos">
+      <img class="login-scoe-logo" src="assets/scoe-logo.jpeg" alt="Siddhant College of Engineering">
+      <div class="login-astra-mark">
+        <img src="assets/astra-logo.jpeg" alt="ASTRA">
+        <span>ASTRA</span>
+      </div>
+    </div>
+    <div class="product">ASTRA FEEDBACK INTELLIGENCE</div>
+    <h1>Feedback that becomes <em>action.</em></h1>
+    <p class="muted">Secure academic feedback collection and analysis for Siddhant College of Engineering.</p>
+    <div class="tabs"><button class="tab active" data-login="student">Student</button><button class="tab" data-login="staff">Staff</button></div>
+    <form id="studentLogin" class="login-form"><label>Student ID</label><input id="studentId" autocomplete="off" placeholder="e.g. SCOE23CE001" required><button class="btn gold">Continue with Student ID →</button><small>No password required. Your ID must be registered and active.</small></form>
+    <form id="staffLogin" class="login-form hidden"><label>Staff role</label><select id="staffRole"><option value="Super Admin">Super Admin</option><option value="HOD">HOD</option></select><label>Email</label><input id="staffEmail" type="email" autocomplete="username" placeholder="Enter your staff email" required><label>Password</label><input id="staffPassword" type="password" autocomplete="current-password" placeholder="Enter your password" required><button class="btn gold">Sign in →</button><small>Faculty accounts are not supported. HOD access is analytics/download only.</small></form>
+    <div id="loginError" class="error hidden"></div>
+  </div>
+</section>
+
+<div id="studentApp" class="portal hidden"></div>
+<div id="staffApp" class="portal hidden"></div>
+<div id="modal" class="modal hidden"><div class="modal-backdrop" data-close></div><div id="modalBox" class="modal-box"></div></div>
+<div id="toast"></div>
+<script src="app.js"></script>
+</body></html>
