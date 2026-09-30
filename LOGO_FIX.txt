@@ -1,0 +1,4 @@
+Website logos are embedded as base64 data URIs in index.html and app.js. This removes all dependency on asset paths during deployment.
+Siddhant College logo: assets/scoe-logo.png
+ASTRA logo: assets/astra-logo.png
+PDF letterhead: assets/header_logo.png

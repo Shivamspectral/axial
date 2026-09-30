@@ -1,0 +1,3 @@
+PDF header source: Letter-headnomination.docx supplied by the user on 2026-09-30.
+The PDF header uses the Siddhant College letterhead logo and official header wording/layout from page 1 of that document.
+The report content, analytics, fixed A3 landscape layout, and Supabase configuration are otherwise unchanged.
